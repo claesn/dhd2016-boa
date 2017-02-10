@@ -48,26 +48,31 @@
       <div n="publisher_info">
         <!--<figure><graphic url="logo"/></figure>-->
         <p n="intro_text">
-          Die Abstracts wurden von den Autorinnen und Autoren in einem Template<lb/>
-          erstellt und mittels des von Marco Petris, Universität Hamburg, entwickelten<lb/>
-          DHConvalidators in eine TEI konforme XML-Datei konvertiert.<lb/>
+          Die Abstracts wurden von den Autorinnen und Autoren zunächst in einem
+          Template erstellt und mittels des von Marco Petris, Universität
+          Hamburg, entwickelten DHConvalidators in eine TEI-konforme XML-Datei
+          konvertiert.  Nach der Konferenz wurden fehlende Abstracts in den
+          Band aufgenommen und die TEI-konformen XML-Dateien aller Abstracs den
+          Autorinnen und Autoren in einem öffentlichen Git-Repository zur
+          Korrektur und Überarbeitung zur Verfügung gestellt.  Anschließend
+          wurde der ganze Band typografisch korrigiert.
         </p>
         <p n="intro_text">
-          Koordination der Publikation: Elisabeth Burr<lb/>
-          Korrektur der Auszeichnung und der Bibliographie:<lb/>
-          &#160;&#160;&#160;&#160;&#160;Julia Burkhardt<lb/>
-          &#160;&#160;&#160;&#160;&#160;Fleur Pfeifer<lb/>
-          &#160;&#160;&#160;&#160;&#160;Rebecca Sierig<lb/>
+          Konzeption und Koordination der Publikation und der Produktion des Bandes: Elisabeth Burr<lb/>
+          Korrektur der TEI/XML-Auszeichnung und der Bibliographie:<lb/>
+          &#160;&#160;&#160;&#160;&#160;Julia Burkhardt, Fleur Pfeifer, Rebecca Sierig<lb/>
           Konvertierung TEI nach PDF: Aramís Concepción Durán<lb/>
           TEI to PDF scripts: Karin Dalziel<lb/>
           &#160;&#160;&#160;&#160;&#160;https://github.com/karindalziel/TEI-to-PDF<lb/>
-          Konferenz-Logo und Umschlaggestaltung: Alexander Morgenstern<lb/>
+          Im Zuge der Vorbereitung der 2. Auflage:<lb/>
+          Überarbeitung der Skripte und des TEI/XML-Markup: Aramís Concepción Durán<lb/>
+          &#160;&#160;&#160;&#160;&#160;https://github.com/aramiscd/dhd2016-boa<lb/>
+          Konferenz-Logo und Umschlaggestaltung: Alexander Morgenstern
         </p>
         <p n="intro_text">
           online verfügbar: http://dhd2016.de/<lb/>
+          copyright nisaba verlag
         </p>
-        <p n="intro_text"><!--<seg n="ISBN">ISBN GOES HERE (controlled by XSLT)</seg><lb/>-->
-        copyright nisaba verlag</p>
       </div>
     </body>
   </text>
