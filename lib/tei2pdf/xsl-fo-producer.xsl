@@ -555,6 +555,10 @@
 
   <!-- Templates for TOC Headers -->
 
+  <xsl:template match="//term[text()='Preface']" mode="toc">
+    <xsl:if test="(//term[text()='Preface'])[1] is ."><fo:block keep-with-next="always"><xsl:call-template name="subhead"/>Vorwort</fo:block></xsl:if>
+  </xsl:template>
+
   <xsl:template match="//term[text()='Plenary']" mode="toc">
     <xsl:if test="(//term[text()='Plenary'])[1] is ."><fo:block keep-with-next="always"><xsl:call-template name="subhead"/>Plenarvorträge</fo:block></xsl:if>
   </xsl:template>
@@ -780,7 +784,8 @@
 
             <xsl:apply-templates select="teiHeader/profileDesc/textClass/keywords[1]/term[1]" mode="toc"/>
 
-            <xsl:if test="descendant::keywords[@n='category']/term[1] = 'Sektion' or
+            <xsl:if test="descendant::keywords[@n='category']/term[1] = 'Preface' or
+              descendant::keywords[@n='category']/term[1] = 'Sektion' or
               descendant::keywords[@n='category']/term[1] = 'Panel' or
               descendant::keywords[@n='category']/term[1] = 'Poster' or
               descendant::keywords[@n='category']/term[1] = 'Workshops' or
@@ -876,9 +881,88 @@
         </fo:page-sequence>
       </xsl:if>
 
-      <!-- Here begins the code for the three content sections: Panels, Papers, and Posters.
-      There is some repeating code here, but for the sake of clarity (and me breaking it whenever
-      I try and clean it up) I've left it as separate sections. -->
+      <!-- Here begins the code for the content sections.  There is some
+           repeating code here, but for the sake of clarity (and me breaking it
+           whenever I try and clean it up) I've left it as separate sections.
+           -->
+
+      <!-- ~~~~~~~~~~~~~~~~~~
+      Preface
+      ~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- Title Page -->
+
+      <xsl:if test="//keywords[@n='category'][1]/term[1] = 'Preface'">
+        <fo:page-sequence master-reference="Single">
+          <fo:flow flow-name="xsl-region-body">
+            <fo:block>
+              <xsl:call-template name="section_head"/>
+              <xsl:text>Vorwort</xsl:text>
+            </fo:block>
+          </fo:flow>
+        </fo:page-sequence>
+
+        <!-- Content -->
+
+
+        <xsl:for-each select="//TEI">
+          <xsl:if test="normalize-space(teiHeader[1]/profileDesc[1]/textClass[1]/keywords[@n='category']/term[1]) = 'Preface'">
+
+            <fo:page-sequence master-reference="Single">
+              <xsl:copy-of select="$header_and_footer"/>
+
+              <fo:flow flow-name="xsl-region-body">
+
+                <!-- Title -->
+                <fo:block id="{@n}" keep-with-next="always">
+                  <xsl:call-template name="head"/>
+                  <xsl:value-of select="teiHeader/fileDesc/titleStmt/title"/>
+                  <!-- if variable is set, print ID's for proofing -->
+                  <xsl:if test="$id= 'yes'">
+                    <xsl:text> - </xsl:text>
+                    <xsl:value-of select="@n"/>
+                  </xsl:if>
+                </fo:block>
+
+                <!-- Authors -->
+                <fo:block>
+                  <xsl:call-template name="text"/>
+                  <xsl:for-each select="teiHeader/fileDesc/titleStmt/author">
+                    <fo:block keep-together.within-column="always">
+                      <fo:block>
+                        <xsl:call-template name="author_name"/>
+                        <xsl:attribute name="id">
+                          <xsl:value-of select="@n"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:value-of select="name/surname"/>
+                        <xsl:text>, </xsl:text>
+                        <xsl:value-of select="name/forename"/>
+                      </fo:block>
+                      <fo:block>
+                        <xsl:call-template name="author_email"/>
+                        <xsl:value-of select="email"/>
+                      </fo:block>
+                      <fo:block>
+                        <xsl:call-template name="author_info"/>
+                        <xsl:value-of select="affiliation"/>
+                      </fo:block>
+                    </fo:block>
+                  </xsl:for-each>
+                </fo:block>
+
+                <!-- Text -->
+                <xsl:for-each select="text/body/div">
+                  <fo:block>
+                    <xsl:call-template name="text"/>
+                    <xsl:apply-templates/>
+                  </fo:block>
+                </xsl:for-each>
+              </fo:flow>
+            </fo:page-sequence>
+          </xsl:if>
+        </xsl:for-each>
+
+      </xsl:if>
 
       <!-- ~~~~~~~~~~~~~~~~~~
       Plenary Sessions

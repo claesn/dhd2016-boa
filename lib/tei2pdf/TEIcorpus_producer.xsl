@@ -63,6 +63,20 @@
 
             </xsl:for-each>
 
+            <!-- Preface -->
+            <xsl:for-each select="$files[normalize-space(//keywords[@n='category']) = 'Preface']">
+                <xsl:sort select="replace(lower-case(normalize-space(/TEI/teiHeader[1]/fileDesc[1]/titleStmt[1]/title[1])), '[^a-z]', '')"/>
+                    <xsl:variable name="id"><xsl:value-of select="/TEI/@xml:id"/></xsl:variable>
+                    <TEI n="{$id}">
+                        <xsl:for-each select="/TEI/teiHeader[1]">
+                            <xsl:copy>
+                                <xsl:apply-templates select="@*|node()"/>
+                            </xsl:copy>
+                        </xsl:for-each>
+                        <xsl:copy-of select="/TEI/text"/>
+                    </TEI>
+            </xsl:for-each>
+
             <!-- Plenary Sessions -->
             <xsl:for-each select="$files[normalize-space(//keywords[@n='category']) = 'Plenary']">
                 <xsl:sort select="replace(lower-case(normalize-space(/TEI/teiHeader[1]/fileDesc[1]/titleStmt[1]/title[1])), '[^a-z]', '')"/>
