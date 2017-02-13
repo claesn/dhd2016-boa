@@ -46,7 +46,6 @@
   <text type="paper" n="single">
     <body>
       <div n="publisher_info">
-        <!--<figure><graphic url="logo"/></figure>-->
         <p n="intro_text">
           Die Abstracts wurden von den Autorinnen und Autoren zunächst in einem
           Template erstellt und mittels des von Marco Petris, Universität
@@ -58,19 +57,29 @@
           wurde der ganze Band typografisch korrigiert.
         </p>
         <p n="intro_text">
-          Konzeption und Koordination der Publikation und der Produktion des Bandes: Elisabeth Burr<lb/>
+          Konzeption und Koordination der Publikation und der Produktion des Bandes:<lb/>
+          &#160;&#160;&#160;&#160;&#160;Elisabeth Burr<lb/>
           Korrektur der TEI/XML-Auszeichnung und der Bibliographie:<lb/>
           &#160;&#160;&#160;&#160;&#160;Julia Burkhardt, Fleur Pfeifer, Rebecca Sierig<lb/>
-          Konvertierung TEI nach PDF: Aramís Concepción Durán<lb/>
+          Konvertierung TEI nach PDF:<lb/>
+          &#160;&#160;&#160;&#160;&#160;Aramís Concepción Durán<lb/>
           TEI to PDF scripts: Karin Dalziel<lb/>
-          &#160;&#160;&#160;&#160;&#160;https://github.com/karindalziel/TEI-to-PDF<lb/>
+          &#160;&#160;&#160;&#160;&#160;https://github.com/karindalziel/TEI-to-PDF
+        </p>
+        <p n="intro_text">
           Im Zuge der Vorbereitung der 2. Auflage:<lb/>
-          Überarbeitung der Skripte und des TEI/XML-Markup: Aramís Concepción Durán<lb/>
-          &#160;&#160;&#160;&#160;&#160;https://github.com/aramiscd/dhd2016-boa<lb/>
+          Überarbeitung der Skripte und des TEI/XML-Markup:<lb/>
+          &#160;&#160;&#160;&#160;&#160;Aramís Concepción Durán<lb/>
+          &#160;&#160;&#160;&#160;&#160;https://github.com/aramiscd/dhd2016-boa
+        </p>
+        <p n="intro_text">
           Konferenz-Logo und Umschlaggestaltung: Alexander Morgenstern
         </p>
         <p n="intro_text">
-          online verfügbar: http://dhd2016.de/<lb/>
+          online verfügbar: http://dhd2016.de/
+        </p>
+        <p n="intro_text">
+          <seg n="ISBN">ISBN GOES HERE (controlled by XSLT)</seg><lb/>
           copyright nisaba verlag
         </p>
       </div>
