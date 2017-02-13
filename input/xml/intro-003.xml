@@ -46,10 +46,9 @@
   <text type="paper" n="single">
     <body>
       <div>
-        <p n="intro_text_center">
-          3. Tagung des Verbands Digital Humanities im deutschsprachigen Raum e.V.
-        </p>
-        <p> <seg n="book_figure">BOOK FIGURE GOES HERE (controlled by XSLT because of different print/PDF versions)</seg></p>
+        <p n="intro_text_center">3. Tagung des Verbands Digital Humanities im deutschsprachigen Raum e.V.</p>
+        <p><seg n="book_figure">BOOK FIGURE GOES HERE (controlled by XSLT because of different print/PDF versions)</seg></p>
+        <p n="intro_text_center">2. überarbeitete und erweiterte Ausgabe</p>
       </div>
     </body>
   </text>
