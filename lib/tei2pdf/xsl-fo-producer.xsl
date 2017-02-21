@@ -1429,18 +1429,15 @@
 
       <!-- End image -->
 
-      <!--
       <xsl:if test="$output = 'pdf'">
         <fo:page-sequence master-reference="Full">
           <fo:flow flow-name="xsl-region-body">
             <fo:block>
-              <fo:external-graphic src="../../../input/images/back_cover.jpg" content-height="297mm" content-width="210mm"/>
+              <fo:external-graphic src="../../../input/images/back_cover.svg" content-height="297mm" content-width="210mm"/>
             </fo:block>
           </fo:flow>
         </fo:page-sequence>
       </xsl:if>
-      -->
-
 
     </fo:root>
 
