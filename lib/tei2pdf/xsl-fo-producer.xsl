@@ -44,7 +44,7 @@
   <xsl:template name="page_full">
     <xsl:attribute name="page-height">297mm</xsl:attribute>
     <xsl:attribute name="page-width">210mm</xsl:attribute>
-    <xsl:attribute name="margin-top">0in</xsl:attribute>
+    <xsl:attribute name="margin-top">-.6mm</xsl:attribute>
     <xsl:attribute name="margin-bottom">0in</xsl:attribute>
     <xsl:attribute name="margin-left">0in</xsl:attribute>
     <xsl:attribute name="margin-right">0in</xsl:attribute>
