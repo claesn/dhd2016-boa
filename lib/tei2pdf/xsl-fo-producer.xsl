@@ -210,7 +210,7 @@
   </xsl:template>
 
   <xsl:template name="publisher_info">
-    <xsl:attribute name="margin-top">6.2in</xsl:attribute>
+    <xsl:attribute name="margin-top">5in</xsl:attribute>
     <xsl:attribute name="font-family"><xsl:value-of select="$main_font"/></xsl:attribute>
   </xsl:template>
 
@@ -700,7 +700,7 @@
 
       <!-- Beginning image -->
 
-      <xsl:if test="$output = 'pdf'">
+      <!-- <xsl:if test="$output = 'pdf'"> -->
         <fo:page-sequence master-reference="Full">
           <fo:flow flow-name="xsl-region-body">
             <fo:block>
@@ -708,7 +708,7 @@
             </fo:block>
           </fo:flow>
         </fo:page-sequence>
-      </xsl:if>
+        <!-- </xsl:if> -->
 
 
 
