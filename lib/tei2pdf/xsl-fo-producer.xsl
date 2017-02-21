@@ -1429,6 +1429,7 @@
 
       <!-- End image -->
 
+      <!--
       <xsl:if test="$output = 'pdf'">
         <fo:page-sequence master-reference="Full">
           <fo:flow flow-name="xsl-region-body">
@@ -1438,6 +1439,7 @@
           </fo:flow>
         </fo:page-sequence>
       </xsl:if>
+      -->
 
 
     </fo:root>
